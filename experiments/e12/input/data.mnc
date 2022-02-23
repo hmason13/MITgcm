@@ -1,0 +1,6 @@
+ &MNC_01
+ monitor_mnc=.TRUE.,
+ mnc_use_outdir=.TRUE.,
+ mnc_outdir_str='mnc_',
+ &
+ 

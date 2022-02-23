@@ -1,0 +1,7 @@
+ NetCDF ERROR:
+ ===
+ Disk quota exceeded                                                            
+  
+ ===
+ MNC ERROR: sync for file 'mnc_test_0013/state.0000004610.t001.nc' in S/R MNC_CW
+ _RL_W

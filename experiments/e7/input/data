@@ -1,0 +1,68 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+ tRef=50*10.
+ viscAh=0.1,
+ viscAz=0.04,
+ no_slip_sides=.TRUE.,
+ no_slip_bottom=.FALSE.,
+ diffKhT=0.1,
+ diffKzT=0.04,
+ f0=1.E-4,
+ beta=0.E-11,
+ tAlpha=2.0E-4,
+ sBeta =0.E-9,
+ gravity=10.,
+ rhoConst=1000.,
+ rhoNil=1000.,
+ heatCapacity_Cp=4000.,
+#rigidLid=.TRUE.,
+ implicitFreeSurface=.TRUE.,
+#exactConserv=.TRUE.,
+ eosType='LINEAR',
+ nonHydrostatic=.TRUE.,
+ saltStepping=.FALSE.,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=1000,
+ cg2dTargetResidual=1.E-9,
+ cg3dMaxIters=100,
+ cg3dTargetResidual=1.E-9,
+ &
+
+# Time stepping parameters
+ &PARM03
+ nIter0=0,
+#endTime=1.E6,
+ nTimeSteps=1.E5,
+ deltaT=10.,
+ abEps=0.1,
+ pChkptFreq=1.E5.,
+ chkptFreq=1.E5.,
+ dumpFreq=2E3,
+ monitorFreq=1.E5,
+ monitorSelect=1,
+ &
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+ dXspacing=50.,
+ dYspacing=50.,
+ delZ=50*20.,
+ &
+
+# Input datasets
+ &PARM05
+ surfQnetFile=  'Qsurface-custom.bin',
+ hydrogThetaFile = 'Theta_initial_nf5.bin',
+# hydrogThetaFile='T.120mn.bin',
+# pSurfInitFile='Eta.120mn.bin',
+# uVelInitFile =  'U.120mn.bin',
+# vVelInitFile =  'V.120mn.bin',
+ &
